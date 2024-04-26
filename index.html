@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>News App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+       <div class="main-nav container flex">
+        <a href="#" onclick="reload()" class="company-logo">
+        <img src="./images/newslogo.jpg" alt="newslogo">
+        </a>
+        <div class="search-bar flex">
+            <input id="search-text" type="text" class="news-input" placeholder="e.g. Entertainment">
+            <button id="search-btn" class="search-btn">Search</button>
+        </div>
+
+       <div class="nav-links" id="nav-links">
+        <ul class="flex">
+            <li class="hover-links nav-items" id="ipl" onclick="onNavItemClick('Ipl')">Ipl</li>
+            <li class="hover-links nav-items" id="finance" onclick="onNavItemClick('Finance')">Finance</li>
+            <li class="hover-links nav-items" id="politics" onclick="onNavItemClick('Politics')">Politics</li>
+        </ul>
+       </div>
+       <div class="hamburger-menu" id="hamburger-menu" onclick="toggleNavLinks()">
+         <i class="fa-solid fa-bars"></i>
+       </div>
+
+    </div>
+    </nav>
+    <main>
+      <div class="cards-container container flex" id="cards-container">
+      </div>  
+    </main>
+    <template id="templates-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://t3.ftcdn.net/jpg/01/79/14/62/360_F_179146215_NEoBhSC2oKw9hwX7K3hAkAPLZueAeGEs.jpg" id="news-img" alt="news-image">
+            </div>
+            <div class="card-content">
+                <h1 id="news-title">this is the title</h1>
+                <h6 class="news-source" id="news-source">End Gagets 17/4/2024</h6>
+                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis semper arcu. Vestibulum cursus lacus eros, tempus malesuada neque imperdiet sed. In egestas, nulla ac semper iaculis, enim justo facilisis diam, vitae aliquam orci libero in orci.
+                </p>
+            </div>
+        </div>
+    </template>
+
+    <script src="./news.js"></script>
+</body>
+</html>
